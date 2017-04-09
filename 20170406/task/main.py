@@ -5,6 +5,7 @@
 # @Link    : https://github.com/nwcrazysword
 
 import re
+# from collections import Counter
 
 # read content from text file
 def getcontent(fpath):
@@ -34,8 +35,7 @@ def countwords(words):
     for word in words:
         num = rdict.get(word, 0)
         rdict[word] = num + 1
-    rlist = sorted(rdict.items(), key=lambda x: x[1], reverse=True)
-    return rlist
+    return sorted(rdict.items(), key=lambda x: x[1], reverse=True)
 
 # save to file
 def saveresult(rpath, rlist):
