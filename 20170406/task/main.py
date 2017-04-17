@@ -10,7 +10,7 @@ import re
 # read content from text file
 def getcontent(fpath):
     with open(fpath, 'r') as f:
-        return f.read(8089)
+        return f.read(8089).decode('utf8')
 
 # clean up the content
 def cleancontent(content):
